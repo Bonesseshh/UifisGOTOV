@@ -1,0 +1,115 @@
+﻿<Page x:Class="WpfApp4.Registration"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp4"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="500"
+      Title="Registration">
+
+    <Grid  Background="#E6DE60">
+
+        <Button
+            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            Margin="338,199,65,119"
+            Content="Назад"
+            Command="{Binding Back}"
+            Background="FloralWhite" Style="{DynamicResource ButtonStyle1}"/>
+        <StackPanel>
+
+            <TextBox
+                x:Name="tb1"
+                Width="150"
+                Height="25"
+                Margin="0 30 110 0"
+                Text="{Binding FName}"
+                Background="FloralWhite" Style="{DynamicResource TextBoxStyle1}"/>
+            <TextBox
+                x:Name="tb2"
+                Width="150"
+                Height="25"
+                Margin="0 25 110 0"
+                Text="{Binding SName}"
+                Background="FloralWhite" Style="{DynamicResource TextBoxStyle1}"/>
+            <TextBlock 
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Width="80"
+                Height="25"
+                Margin="0 -130 390 0"
+                Text="Фамилия:"
+                TextAlignment="Center"
+                FontWeight="Bold"/>
+            <TextBlock 
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Width="100"
+                Height="25"
+                Margin="0 -25 390 0"
+                Text="Имя:"
+                TextAlignment="Center"
+                FontWeight="Bold"/>
+            <TextBlock 
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Width="100"
+                Height="25"
+                Margin="0 25 390 0"
+                Text="Отчество:"
+                TextAlignment="Center"
+                FontWeight="Bold"/>
+            <TextBlock 
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Width="100"
+                Height="25"
+                Margin="0 25 390 0"
+                Text="Логин:"
+                TextAlignment="Center"
+                FontWeight="Bold"/>
+            <TextBlock 
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Width="100"
+                Height="25"
+                Margin="0 25 390 0"
+                Text="Пароль:"
+                TextAlignment="Center"
+                FontWeight="Bold"/>
+            <TextBlock 
+                Width="100"
+                Height="25"
+                Margin="0 25 390 0"
+                Text=""
+                TextAlignment="Center"
+                FontWeight="Bold"/>
+            <TextBox
+                x:Name="tb3"
+                Width="150"
+                Height="25"
+                Margin="0 -330 110 0"
+                Text="{Binding LName}"
+                Background="FloralWhite" Style="{DynamicResource TextBoxStyle1}"/>
+            <TextBox
+                x:Name="tb4"
+                Width="150"
+                Height="25"
+                Margin="0 -230 110 0"
+                Text="{Binding Login}"
+                Background="FloralWhite" Style="{DynamicResource TextBoxStyle1}"/>
+            <PasswordBox
+                x:Name="tb5"
+                Width="150"
+                Height="25"
+                Margin="0 -130 110 0"
+                PasswordChanged="tb5_PasswordChanged"
+                Background="FloralWhite" Style="{DynamicResource PasswordBoxStyle1}"/>
+
+            <Button 
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Width="100"
+                Height="30"
+                Margin="270 -300 0 0"
+                Content="Регистрация"
+                Command="{Binding Register}"
+                FontWeight="Bold"
+                Background="FloralWhite" Style="{DynamicResource ButtonStyle1}"/>
+        </StackPanel>
+    </Grid>
+</Page>

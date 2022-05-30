@@ -1,0 +1,58 @@
+﻿<Page x:Class="WpfApp4.RoutePage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:WpfApp4" d:DataContext="{d:DesignInstance Type=local:RouteVM}"
+      mc:Ignorable="d" 
+      d:DesignHeight="350" d:DesignWidth="500"
+      Title="RoutePage">
+
+    <Grid Style="{DynamicResource GridStyle1}"
+        Background="#E6DE60">
+        <ComboBox Style="{DynamicResource ComboBoxStyle2}"
+                    Height="30"
+                    Background="FloralWhite"
+                    FontFamily="Bahnschrift SemiBold SemiCondensed"
+                    Margin="345,63,27,257"
+                    ItemsSource="{Binding TypeTr}"
+                    SelectedItem="{Binding SelectedType}"
+                    DisplayMemberPath="NameTransport" 
+                    Width="70"/>
+        <TextBox
+            x:Name="tblog"
+            Margin="25,61,307,258"
+            Text ="{Binding NumberRoute}"
+            Background="FloralWhite" Style="{DynamicResource TextBoxStyle1}"/>
+        <TextBlock Style="{DynamicResource TextBlockStyle1}" Margin="63,30,317,289"
+            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            Text="Номер транспорта: "
+            FontWeight="Bold"
+            TextAlignment="Center"/>
+        <Button Margin="193,61,250,258"
+                FontFamily="Bahnschrift SemiBold SemiCondensed"
+                Content="Поиск"
+                Command="{Binding Find}"
+                FontWeight="Bold" Style="{DynamicResource ButtonStyle1}"/>
+        <ListBox Style="{DynamicResource ListBoxStyle1}"
+            FontFamily="Bahnschrift SemiBold SemiCondensed"
+            Name="lbox5" Margin="25,132,135,36"
+            ItemsSource="{Binding FindRoute}"
+            Background="AntiqueWhite">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel>
+                        <TextBlock 
+                            Text="{Binding Path=IdRouteNavigation.Route1, UpdateSourceTrigger=PropertyChanged}" 
+                            Width="300"
+                            Background="FloralWhite"
+                            FontWeight="Bold"/>
+                       
+                        
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+
+    </Grid>
+</Page>
