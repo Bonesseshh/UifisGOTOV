@@ -26,10 +26,27 @@ namespace WpfApp4
                    MessageBox.Show("Выберете тип транспорта");
                    return;
                }
-               if (SelectedTp != null)
+               try
                {
-                  FindRoute = new ObservableCollection<Transport>(Service.db.Transports.Include(x => x.IdRouteNavigation).Where(x => x.Number == Convert.ToInt32(NumberRoute) && x.IdType == SelectedTp.IdTransport));
+                   var number = Convert.ToInt32(NumberRoute);
+                   var asdasd = new ObservableCollection<Transport>(Service.db.Transports.Include(x => x.IdRouteNavigation).Where(x => x.Number == number && x.IdType == SelectedTp.IdTransport));
+                   if (SelectedTp != null && asdasd != null)
+                   {
+                       FindRoute = new ObservableCollection<Transport>(Service.db.Transports.Include(x => x.IdRouteNavigation).Where(x => x.Number == number && x.IdType == SelectedTp.IdTransport));
+                   }
+                   if (asdasd == null)
+                   {
+                       MessageBox.Show("Неверный маршрут!");
+                       return;
+                   }
                }
+               catch (Exception)
+               {
+                   MessageBox.Show("Вы ввели буквы вместо номера!");
+                   return;
+               }
+               
+               
            }));
         public TypeTransport SelectedType
         {

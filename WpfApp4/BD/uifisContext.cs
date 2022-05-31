@@ -9,6 +9,7 @@ namespace WpfApp4
     {
         public uifisContext()
         {
+            Database.EnsureCreated();
         }
 
         public uifisContext(DbContextOptions<uifisContext> options)

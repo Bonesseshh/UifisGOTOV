@@ -13,7 +13,6 @@ namespace WpfApp4
         private string _password;
         private RelayCommand _authorization;
         private RelayCommand _registr;
-
         public RelayCommand Auth => _authorization ??
                                     (_authorization = new RelayCommand((x) =>
                                     {
@@ -39,7 +38,6 @@ namespace WpfApp4
                                           Service.frame.Navigate(new Registration());
                                       }));
 
-
         public string Login
         {
             get => _login;
@@ -49,7 +47,6 @@ namespace WpfApp4
                 OnPropertyChanged();
             }
         }
-
         public string Password
         {
             get => _password;
