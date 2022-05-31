@@ -7,33 +7,33 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AuthorizationPage.xaml.cs">
+    <Compile Update="Pages\AuthorizationPage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="ProfilePage.xaml.cs">
+    <Compile Update="Pages\ProfilePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="Registration.xaml.cs">
+    <Compile Update="Pages\Registration.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="RoutePage.xaml.cs">
+    <Compile Update="Pages\RoutePage.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AuthorizationPage.xaml">
+    <Page Update="Pages\AuthorizationPage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="MainWindow.xaml">
+    <Page Update="Windows\MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="ProfilePage.xaml">
+    <Page Update="Pages\ProfilePage.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="Registration.xaml">
+    <Page Update="Pages\Registration.xaml">
       <SubType>Designer</SubType>
     </Page>
-    <Page Update="RoutePage.xaml">
+    <Page Update="Pages\RoutePage.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

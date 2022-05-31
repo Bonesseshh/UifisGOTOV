@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\asren\source\repos\WpfApp4\WpfApp4\obj\Debug\net6.0-windows\
+C:\Users\gr604_vdaan\Source\Repos\Bonesseshh\UifisGOTOV\WpfApp4\obj\Debug\net6.0-windows\
 WpfApp4
 none
 false
 TRACE;DEBUG;NET;NET6_0;NETCOREAPP
-C:\Users\asren\source\repos\WpfApp4\WpfApp4\App.xaml
-5-1673688803
+C:\Users\gr604_vdaan\Source\Repos\Bonesseshh\UifisGOTOV\WpfApp4\App.xaml
+5-149467225
 
-202038660161
-214-371187103
-AuthorizationPage.xaml;MainWindow.xaml;ProfilePage.xaml;Registration.xaml;RoutePage.xaml;
+20-509772283
+214-2118399280
+Pages\AuthorizationPage.xaml;Pages\ProfilePage.xaml;Pages\Registration.xaml;Pages\RoutePage.xaml;Windows\MainWindow.xaml;
 
 False
 
